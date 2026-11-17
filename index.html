@@ -3,12 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Habitly</title>
+    <meta name="description" content="Habitly - Build better habits, one day at a time.">
+    <title>Habitly | Your Daily Habit Tracker</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <h1>Habitly</h1>
-    <h2>Created by Nithikeshwari M</h2>
+    <!-- Header -->
+    <header>
+        <div class="container navbar">
+            <div>
+                <div class="logo">🌿 Habit<span>ly.</span></div>
+                <p class="date">Your little steps create big changes.</p>
+            </div>
+            <div class="date">Tuesday, 17 November</div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- Welcome Section -->
+        <section class="welcome">
+            <h1>Good Morning! ☀️</h1>
+            <p>Every small step counts. Keep showing up for yourself.</p>
+        </section>
+
+        <!-- Summary Section -->
+        <section aria-label="Habit Summary">
+            <div class="stats">
+
+                <article class="stat-card">
+                    <p>✅ Done Today</p>
+                    <h2>3/5</h2>
+                    <small>You're making progress!</small>
+                </article>
+
+                <article class="stat-card">
+                    <p>🔥 Best Streak</p>
+                    <h2>12 Days</h2>
+                    <small>Consistency is your superpower.</small>
+                </article>
+
+                <article class="stat-card">
+                    <p>📊 This Week</p>
+                    <h2>78%</h2>
+                    <small>Keep up the great work!</small>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Habits Section -->
+        <section aria-label="Daily Habits">
+
+            <div class="section-heading">
+                <h2>My Daily Habits 🌱</h2>
+                <span>Small habits, big results.</span>
+            </div>
+
+            <div class="habit-grid">
+
+                <article class="habit-card">
+                    <div class="habit-icon">📚</div>
+                    <h3>Reading</h3>
+                    <p class="streak">🔥 7 Day Streak</p>
+                    <div class="progress-track">
+                        <div class="progress-fill" style="width: 80%;"></div>
+                    </div>
+                    <button class="complete-btn" type="button">Complete</button>
+                </article>
+
+                <article class="habit-card">
+                    <div class="habit-icon">💧</div>
+                    <h3>Drink Water</h3>
+                    <p class="streak">🔥 12 Day Streak</p>
+                    <div class="progress-track">
+                        <div class="progress-fill" style="width: 90%;"></div>
+                    </div>
+                    <button class="complete-btn" type="button">Complete</button>
+                </article>
+
+                <article class="habit-card">
+                    <div class="habit-icon">🧘</div>
+                    <h3>Meditation</h3>
+                    <p class="streak">🔥 5 Day Streak</p>
+                    <div class="progress-track">
+                        <div class="progress-fill" style="width: 65%;"></div>
+                    </div>
+                    <button class="complete-btn" type="button">Complete</button>
+                </article>
+
+                <article class="habit-card">
+                    <div class="habit-icon">🏃</div>
+                    <h3>Exercise</h3>
+                    <p class="streak">🔥 3 Day Streak</p>
+                    <div class="progress-track">
+                        <div class="progress-fill" style="width: 50%;"></div>
+                    </div>
+                    <button class="complete-btn" type="button">Complete</button>
+                </article>
+
+                <article class="habit-card">
+                    <div class="habit-icon">✍️</div>
+                    <h3>Journaling</h3>
+                    <p class="streak">🔥 9 Day Streak</p>
+                    <div class="progress-track">
+                        <div class="progress-fill" style="width: 75%;"></div>
+                    </div>
+                    <button class="complete-btn" type="button">Complete</button>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Built with the CodGen Frontend Internship | codgen.in</p>
+        <p>🌿 Made with care, one habit at a time.</p>
+    </footer>
 
 </body>
-</html>
+    </html>
