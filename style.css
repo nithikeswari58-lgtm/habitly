@@ -79,35 +79,67 @@ main {
     padding: var(--space-5) 0;
 }
 
-/* WELCOME */
+/* PREMIUM WELCOME HERO */
 
 .welcome {
     position: relative;
     overflow: hidden;
+    background: linear-gradient(120deg, #0B1F3A, #16445A);
+    padding: 40px;
+    border-radius: 18px;
     margin-bottom: var(--space-4);
-    padding: var(--space-2) 0;
+    box-shadow: 0 12px 30px rgba(11, 31, 58, 0.12);
 }
 
-.welcome::after {
-    content: "✦";
-    position: absolute;
-    right: 8%;
-    top: -15px;
-    font-size: 90px;
-    color: rgba(20,184,166,0.10);
-    pointer-events: none;
+.welcome-content {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+}
+
+.welcome-label {
+    display: inline-block;
+    color: #5EEAD4;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
 }
 
 .welcome h1 {
-    font-size: clamp(24px, 4vw, 32px);
-    margin-bottom: var(--space-1);
+    color: var(--white);
+    font-size: clamp(25px, 4vw, 36px);
+    line-height: 1.3;
+    margin-bottom: 12px;
     letter-spacing: -1px;
 }
 
 .welcome p {
-    color: var(--text);
-    font-size: 15px;
-    line-height: 1.6;
+    color: #CBD5E1;
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 500px;
+}
+
+.welcome-note {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 10px 16px;
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 30px;
+    color: #E2E8F0;
+    font-size: 12px;
+}
+
+.welcome-decoration {
+    position: absolute;
+    right: 45px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 110px;
+    opacity: 0.18;
+    pointer-events: none;
 }
 
 /* SUMMARY CARDS */
@@ -189,8 +221,6 @@ main {
     border: 1px solid rgba(226,232,240,0.7);
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
-
-/* Small signature accent */
 
 .habit-card::before {
     content: "";
@@ -328,8 +358,19 @@ footer {
         flex-direction: column;
     }
 
-    .welcome::after {
-        right: 2%;
+    .welcome {
+        padding: 28px 22px;
+        border-radius: 14px;
+    }
+
+    .welcome-decoration {
+        right: 12px;
+        top: 15px;
+        transform: none;
         font-size: 65px;
+    }
+
+    .welcome-note {
+        line-height: 1.6;
     }
 }
