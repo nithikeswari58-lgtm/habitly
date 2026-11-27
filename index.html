@@ -1,143 +1,186 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Habitly - Build better habits, one day at a time.">
-    <title>Habitly | Your Daily Habit Tracker</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <meta name="description" content="Habitly - Build better habits, one day at a time."><title>Habitly | Your Daily Habit Tracker</title>
 
-<body>
+<link rel="stylesheet" href="style.css">
 
-    <!-- Header -->
-    <header>
-        <div class="container navbar">
-            <div>
-                <div class="logo">🌿 Habit<span>ly.</span></div>
-                <p class="date">Your little steps create big changes.</p>
-            </div>
-            <div class="date">Tuesday, 17 November</div>
+</head><body><!-- HEADER -->
+
+<header>
+    <div class="container navbar">
+
+        <div>
+            <div class="logo">🌿 Habit<span>ly.</span></div>
+            <p class="date">Your little steps create big changes.</p>
         </div>
-    </header>
 
-    <main class="container">
+        <div class="date" id="currentDate"></div>
 
-        <!-- Welcome Section -->
-        <section class="welcome">
-    <div class="welcome-content">
-        <span class="welcome-label">YOUR DAILY GROWTH SPACE</span>
-
-        <h1>Small steps. Big changes. 🌱</h1>
-
-        <p>
-            Build consistency, celebrate progress, and become
-            a better version of yourself every day.
-        </p>
-
-        <div class="welcome-note">
-            ✨ Every habit brings you closer to your goals.
-        </div>
     </div>
+</header>
 
-    <div class="welcome-decoration">🌿</div>
-</section>
 
-        <!-- Summary Section -->
-        <section aria-label="Habit Summary">
-            <div class="stats">
+<main class="container">
 
-                <article class="stat-card">
-                    <p>✅ Done Today</p>
-                    <h2>3/5</h2>
-                    <small>You're making progress!</small>
-                </article>
+    <!-- WELCOME SECTION -->
 
-                <article class="stat-card">
-                    <p>🔥 Best Streak</p>
-                    <h2>12 Days</h2>
-                    <small>Consistency is your superpower.</small>
-                </article>
+    <section class="welcome">
 
-                <article class="stat-card">
-                    <p>📊 This Week</p>
-                    <h2>78%</h2>
-                    <small>Keep up the great work!</small>
-                </article>
+        <div class="welcome-content">
 
-            </div>
-        </section>
+            <span class="welcome-label">YOUR DAILY GROWTH SPACE</span>
 
-        <!-- Habits Section -->
-        <section aria-label="Daily Habits">
+            <h1>Small steps. Big changes. 🌱</h1>
 
-            <div class="section-heading">
-                <h2>My Daily Habits 🌱</h2>
-                <span>Small habits, big results.</span>
+            <p>
+                Build consistency, celebrate progress, and become
+                a better version of yourself every day.
+            </p>
+
+            <div class="welcome-note">
+                ✨ Every habit brings you closer to your goals.
             </div>
 
-            <div class="habit-grid">
+        </div>
 
-                <article class="habit-card">
-                    <div class="habit-icon">📚</div>
-                    <h3>Reading</h3>
-                    <p class="streak">🔥 7 Day Streak</p>
-                    <div class="progress-track">
-                        <div class="progress-fill" style="width: 80%;"></div>
-                    </div>
-                    <button class="complete-btn" type="button">Complete</button>
-                </article>
+        <div class="welcome-decoration">🌿</div>
 
-                <article class="habit-card">
-                    <div class="habit-icon">💧</div>
-                    <h3>Drink Water</h3>
-                    <p class="streak">🔥 12 Day Streak</p>
-                    <div class="progress-track">
-                        <div class="progress-fill" style="width: 90%;"></div>
-                    </div>
-                    <button class="complete-btn" type="button">Complete</button>
-                </article>
+    </section>
 
-                <article class="habit-card">
-                    <div class="habit-icon">🧘</div>
-                    <h3>Meditation</h3>
-                    <p class="streak">🔥 5 Day Streak</p>
-                    <div class="progress-track">
-                        <div class="progress-fill" style="width: 65%;"></div>
-                    </div>
-                    <button class="complete-btn" type="button">Complete</button>
-                </article>
 
-                <article class="habit-card">
-                    <div class="habit-icon">🏃</div>
-                    <h3>Exercise</h3>
-                    <p class="streak">🔥 3 Day Streak</p>
-                    <div class="progress-track">
-                        <div class="progress-fill" style="width: 50%;"></div>
-                    </div>
-                    <button class="complete-btn" type="button">Complete</button>
-                </article>
+    <!-- DAILY QUOTE -->
 
-                <article class="habit-card">
-                    <div class="habit-icon">✍️</div>
-                    <h3>Journaling</h3>
-                    <p class="streak">🔥 9 Day Streak</p>
-                    <div class="progress-track">
-                        <div class="progress-fill" style="width: 75%;"></div>
-                    </div>
-                    <button class="complete-btn" type="button">Complete</button>
-                </article>
+    <section class="quote-card">
 
-            </div>
-        </section>
+        <span>✨ DAILY INSPIRATION</span>
 
-    </main>
+        <p id="quoteText">Loading...</p>
 
-    <!-- Footer -->
-    <footer>
-        <p>Built with the CodGen Frontend Internship | codgen.in</p>
-        <p>🌿 Made with care, one habit at a time.</p>
-    </footer>
+        <small id="quoteAuthor"></small>
 
-</body>
-    </html>
+    </section>
+
+
+    <!-- SUMMARY -->
+
+    <section aria-label="Habit Summary">
+
+        <div class="stats">
+
+            <article class="stat-card">
+
+                <p>✅ Done Today</p>
+
+                <h2 id="doneToday">0/0</h2>
+
+                <small>Every small step counts!</small>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <p>🌱 Total Habits</p>
+
+                <h2 id="totalHabits">0</h2>
+
+                <small>Keep building better habits.</small>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ADD HABIT -->
+
+    <section class="add-habit-section">
+
+        <div class="section-heading">
+
+            <h2>Add a New Habit ✨</h2>
+
+            <span>Start with one small step.</span>
+
+        </div>
+
+
+        <form id="habitForm">
+
+            <input
+                type="text"
+                id="habitInput"
+                placeholder="Enter your new habit..."
+                maxlength="40"
+                autocomplete="off"
+            >
+
+            <button type="submit">+ Add Habit</button>
+
+        </form>
+
+
+        <div class="emoji-picker">
+
+            <span>Select an emoji:</span>
+
+            <button type="button" class="emoji-btn selected" data-emoji="🌱">🌱</button>
+
+            <button type="button" class="emoji-btn" data-emoji="📚">📚</button>
+
+            <button type="button" class="emoji-btn" data-emoji="💧">💧</button>
+
+            <button type="button" class="emoji-btn" data-emoji="🏃">🏃</button>
+
+            <button type="button" class="emoji-btn" data-emoji="🧘">🧘</button>
+
+            <button type="button" class="emoji-btn" data-emoji="✍️">✍️</button>
+
+            <button type="button" class="emoji-btn" data-emoji="🎯">🎯</button>
+
+        </div>
+
+
+        <p id="formMessage" aria-live="polite"></p>
+
+    </section>
+
+
+    <!-- HABIT LIST -->
+
+    <section aria-label="Daily Habits">
+
+        <div class="section-heading">
+
+            <h2>My Daily Habits 🌱</h2>
+
+            <span>Small habits, big results.</span>
+
+        </div>
+
+
+        <div class="habit-grid" id="habitGrid">
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>Built with the CodGen Frontend Internship | codgen.in</p>
+
+    <p>🌿 Made with care, one habit at a time.</p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body></html>
